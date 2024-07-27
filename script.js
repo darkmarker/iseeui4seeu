@@ -41,5 +41,7 @@ document.getElementById('potVolumeForm').addEventListener('submit', function(eve
         }
     }
     
-    document.getElementById('result').innerText = `Загальний об'єм горщиків: ${totalVolume.toFixed(2)} літрів`;
+    const bags40L = Math.ceil(totalVolume / 40);  // Кількість мішків по 40 літрів, округлення вгору
+
+    document.getElementById('result').innerText = `Загальний об'єм горщиків: ${totalVolume.toFixed(2)} літрів (приблизно ${bags40L} мішків по 40 літрів)`;
 });
